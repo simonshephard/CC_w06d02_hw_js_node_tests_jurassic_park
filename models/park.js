@@ -65,7 +65,7 @@ Park.prototype.totalRevenuePerYear = function() {
 Park.prototype.dietTypes = function() {
   dietTypes = {};
   for (let i = 0; i < this.dinosaurs.length; i++) {
-    if (dietTypes.hasOwnProperty(this.dinosaurs[i].diet) {
+    if (dietTypes.hasOwnProperty(this.dinosaurs[i].diet)) {
       dietTypes[this.dinosaurs[i].diet] += 1;
     } else {
       dietTypes[this.dinosaurs[i].diet] = 1;
