@@ -89,6 +89,12 @@ describe('Park', function() {
     assert.strictEqual(actual, expected);
   });
 
+  it('should be able to provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type', function() {
+    const actual = park2.dietTypes();
+    const expected = {"Carnivore": 1, "Herbivore": 1};
+    assert.deepStrictEqual(actual, expected);
+  });
+
   // Calculate the total number of visitors per day
   // Calculate the total number of visitors per year
   // Calculate the total revenue from ticket sales for one year
