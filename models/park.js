@@ -34,4 +34,5 @@ Park.prototype.findDinosaursOfSpecies = function(species) {
   }
   return dinosaurs;
 };
+
 module.exports = Park;
