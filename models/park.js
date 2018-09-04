@@ -13,4 +13,16 @@ Park.prototype.removeDinosaur = function(dinosaur) {
   this.dinosaurs.splice(index, 1);
 };
 
+Park.prototype.findPopularDinosaur = function() {
+  let maxGuests = 0;
+  let popular = null;
+  for (let i = 0; i < this.dinosaurs.length; i++) {
+    if (this.dinosaurs[i].guestsAttractedPerDay > maxGuests) {
+      maxGuests = this.dinosaurs[i].guestsAttractedPerDay;
+      popular = this.dinosaurs[i];
+    }
+  }
+  return popular;
+};
+
 module.exports = Park;

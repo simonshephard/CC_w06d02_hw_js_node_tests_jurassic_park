@@ -8,7 +8,8 @@ describe('Park', function() {
   let dinosaur2;
   let dinosaurs1;
   let dinosaurs2;
-  let park;
+  let park1;
+  let park2;
 
   beforeEach(function () {
     dinosaur1 = new Dinosaur('Dino1', 'carnivore', 50);
@@ -52,10 +53,9 @@ describe('Park', function() {
   });
 
   it('should be able to find the dinosaur that attracts the most visitors', function() {
-    const actual = park2.findPopularDinosaur;
+    const actual = park2.findPopularDinosaur();
     const expected = dinosaur1;
-    assert.deepStrictEqual(actual, expected);
-
+    assert.strictEqual(actual, expected);
   });
 
   it('should be able to find all dinosaurs of a particular species', function() {
