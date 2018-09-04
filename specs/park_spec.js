@@ -60,9 +60,8 @@ describe('Park', function() {
 
   it('should be able to find all dinosaurs of a particular species', function() {
     const actual = park2.findDinosaursOfSpecies('Species1');
-    const expected = dinosaur1;
+    const expected = dinosaurs1;
     assert.strictEqual(actual, expected);
-
   });
 
   it('should be able to remove all dinosaurs of a particular species', function() {

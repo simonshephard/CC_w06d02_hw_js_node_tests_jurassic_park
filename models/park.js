@@ -25,4 +25,13 @@ Park.prototype.findPopularDinosaur = function() {
   return popular;
 };
 
+Park.prototype.findDinosaursOfSpecies = function(species) {
+  let dinosaurs = [];
+  for (let i = 0; i < this.dinosaurs.length; i++) {
+    if (this.dinosaurs[i].species === species) {
+      dinosaurs.push(dinosaurs[i]);
+    }
+  }
+  return dinosaurs;
+};
 module.exports = Park;
