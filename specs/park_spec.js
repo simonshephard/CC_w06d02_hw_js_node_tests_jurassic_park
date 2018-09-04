@@ -65,7 +65,8 @@ describe('Park', function() {
   });
 
   it('should be able to remove all dinosaurs of a particular species', function() {
-    const actual = park2.removeDinosaursOfSpecies('Species2');
+    park2.removeDinosaursOfSpecies('Species2');
+    const actual = park2.dinosaurs;
     const expected = dinosaurs1;
     assert.deepStrictEqual(actual, expected);
   });
