@@ -95,11 +95,5 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, expected);
   });
 
-  // Calculate the total number of visitors per day
-  // Calculate the total number of visitors per year
-  // Calculate the total revenue from ticket sales for one year
-  // Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type
-  // Example: { 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }
-
 
 });
