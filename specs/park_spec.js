@@ -15,36 +15,40 @@ describe('Park', function() {
     dinosaur2 = new Dinosaur('Dino2', 'herbivore', 10);
     dinosaurs1 = [dinosaur1];
     dinosaurs2 = [dinosaur1, dinosaur2];
-    park = new Park('Jurassic Park', 10, dinosaurs1);
+    park1 = new Park('Jurassic Park', 10, dinosaurs1);
+    park2 = new Park('Jurassic Park', 10, dinosaurs2);
   })
 
   it('should have a name', function() {
-    const actual = park.name;
+    const actual = park1.name;
     const expected = 'Jurassic Park';
     assert.strictEqual(actual, expected);
   });
 
   it('should have a ticket price', function() {
-    const actual = park.ticketPrice;
+    const actual = park1.ticketPrice;
     const expected = 10;
     assert.strictEqual(actual, expected);
   });
 
   it('should have a collection of dinosaurs', function() {
-    const actual = park.dinosaurs;
+    const actual = park1.dinosaurs;
     const expected = dinosaurs1;
     assert.strictEqual(actual, expected);
   });
 
   it('should be able to add a dinosaur to its collection', function() {
-    park.addDinosaur(dinosaur2);
-    const actual = park.dinosaurs;
+    park1.addDinosaur(dinosaur2);
+    const actual = park1.dinosaurs;
     const expected = dinosaurs2;
     assert.deepStrictEqual(actual, expected);
   });
 
   it('should be able to remove a dinosaur from its collection', function() {
-
+    park2.removeDinosaur(dinosaur2);
+    const actual = park2.dinosaurs;
+    const expected = dinosaurs1;
+    assert.deepStrictEqual(actual, expected);
   });
 
   it('should be able to find the dinosaur that attracts the most visitors', function() {
