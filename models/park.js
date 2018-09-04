@@ -42,4 +42,14 @@ Park.prototype.removeDinosaursOfSpecies = function(species) {
   }
 };
 
+Park.prototype.totalVisitorsPerDay = function() {
+  let total = 0;
+  for (let i = 0; i < this.dinosaurs.length; i++) {
+    total += this.dinosaurs[i].guestsAttractedPerDay;
+  }
+  return total;
+};
+
+
+
 module.exports = Park;
