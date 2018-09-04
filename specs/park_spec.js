@@ -6,7 +6,8 @@ describe('Park', function() {
 
   let dinosaur1;
   let dinosaur2;
-  let dinosaurs;
+  let dinosaurs1;
+  let dinosaurs2;
   let park;
 
   beforeEach(function () {
@@ -39,8 +40,7 @@ describe('Park', function() {
     park.addDinosaur(dinosaur2);
     const actual = park.dinosaurs;
     const expected = dinosaurs2;
-    assert.strictEqual(actual, expected);
-
+    assert.deepStrictEqual(actual, expected);
   });
 
   it('should be able to remove a dinosaur from its collection', function() {
