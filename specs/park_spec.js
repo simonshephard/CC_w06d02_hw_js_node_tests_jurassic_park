@@ -12,8 +12,8 @@ describe('Park', function() {
   let park2;
 
   beforeEach(function () {
-    dinosaur1 = new Dinosaur('Dino1', 'carnivore', 50);
-    dinosaur2 = new Dinosaur('Dino2', 'herbivore', 10);
+    dinosaur1 = new Dinosaur('Species1', 'Carnivore', 50);
+    dinosaur2 = new Dinosaur('Species2', 'Herbivore', 10);
     dinosaurs1 = [dinosaur1];
     dinosaurs2 = [dinosaur1, dinosaur2];
     park1 = new Park('Jurassic Park', 10, dinosaurs1);
@@ -59,6 +59,9 @@ describe('Park', function() {
   });
 
   it('should be able to find all dinosaurs of a particular species', function() {
+    const actual = park2.findDinosaursOfSpecies('Species1');
+    const expected = dinosaur1;
+    assert.strictEqual(actual, expected);
 
   });
 
