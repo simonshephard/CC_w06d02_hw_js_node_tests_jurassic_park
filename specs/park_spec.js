@@ -12,8 +12,9 @@ describe('Park', function() {
   beforeEach(function () {
     dinosaur1 = new Dinosaur('Dino1', 'carnivore', 50);
     dinosaur2 = new Dinosaur('Dino2', 'herbivore', 10);
-    dinosaurs = [dinosaur1, dinosaur2];
-    park = new Park('Jurassic Park', 10, dinosaurs);
+    dinosaurs1 = [dinosaur1];
+    dinosaurs2 = [dinosaur1, dinosaur2];
+    park = new Park('Jurassic Park', 10, dinosaurs1);
   })
 
   it('should have a name', function() {
@@ -30,11 +31,15 @@ describe('Park', function() {
 
   it('should have a collection of dinosaurs', function() {
     const actual = park.dinosaurs;
-    const expected = dinosaurs;
+    const expected = dinosaurs1;
     assert.strictEqual(actual, expected);
   });
 
   it('should be able to add a dinosaur to its collection', function() {
+    park.addDinosaur(dinosaur2);
+    const actual = park.dinosaurs;
+    const expected = dinosaurs2;
+    assert.strictEqual(actual, expected);
 
   });
 
