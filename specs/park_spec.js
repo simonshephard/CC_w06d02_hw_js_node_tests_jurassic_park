@@ -83,6 +83,11 @@ describe('Park', function() {
     assert.strictEqual(actual, expected);
   });
 
+  it('should be able to calculate the total revenue from ticket sales for one year', function() {
+    const actual = park2.totalRevenuePerYear();
+    const expected = 60 * 365 * 10;
+    assert.strictEqual(actual, expected);
+  });
 
   // Calculate the total number of visitors per day
   // Calculate the total number of visitors per year
